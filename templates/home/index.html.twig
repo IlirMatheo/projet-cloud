@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet Cloud Symfony</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Bienvenue sur mon projet Cloud</h1>
+        <p><strong>Nom :</strong> {{ nom }}</p>
+        <p><strong>Prénom :</strong> {{ prenom }}</p>
+        <p><strong>Date et heure :</strong> {{ date|date('d/m/Y H:i:s') }}</p>
+    </div>
+</body>
+</html>
