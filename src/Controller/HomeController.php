@@ -12,8 +12,8 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'prenom' => 'TON-PRENOM',
-            'nom' => 'TON-NOM',
+            'prenom' => 'Ilir',
+            'nom' => 'Labi',
             'date' => new \DateTimeImmutable(),
         ]);
     }
