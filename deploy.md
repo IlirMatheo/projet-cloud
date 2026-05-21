@@ -1,86 +1,80 @@
-\# Rapport de déploiement - Ilir Matheo
+\## Déploiement sur Scalingo
 
 
 
-\## Liens
+1\. Connexion au site Scalingo.
 
 
 
-\- Application en ligne : https://projet-cloud-ilir.osc-fr1.scalingo.io/
-
-\- Dépôt GitHub : https://github.com/IlirMatheo/projet-cloud
+2\. Création d’une nouvelle application.
 
 
 
-\## Prérequis
+3\. Sélection du mode de déploiement avec GitHub.
 
 
 
-Pour réaliser ce projet, j’ai utilisé :
+4\. Autorisation de l’accès GitHub à Scalingo.
 
 
 
-\- PHP 8.2
-
-\- Symfony 7.4
-
-\- Composer
-
-\- Git / GitHub
-
-\- Scalingo
+5\. Sélection du dépôt GitHub du projet.
 
 
 
-\## Configuration CI
+6\. Activation du déploiement automatique sur la branche `main`.
 
 
 
-Le fichier de configuration CI se trouve dans :
+7\. Lancement du premier déploiement.
 
 
 
-.github/workflows/ci.yml
+8\. Vérification des logs de build sur Scalingo.
 
 
 
-Ce fichier permet de lancer automatiquement des vérifications à chaque push sur GitHub.
+9\. Vérification du message `successful deployment`.
 
 
 
-\## Étapes du déploiement
+10\. Ouverture de l’application avec l’URL fournie par Scalingo.
 
 
 
-1\. Création du projet Symfony en local.
-
-2\. Création du HomeController.
-
-3\. Création de la page d’accueil avec Twig.
-
-4\. Suppression de la configuration liée à la base de données.
-
-5\. Création du dépôt GitHub.
-
-6\. Push du projet sur GitHub.
-
-7\. Création de l’application sur Scalingo.
-
-8\. Liaison entre Scalingo et GitHub.
-
-9\. Activation du déploiement automatique.
-
-10\. Vérification du bon fonctionnement du site en ligne.
+\---
 
 
 
-\## Capture d’écran
+\## Variables d’environnement importantes
 
 
 
-La capture d’écran du déploiement réussi est présente à la racine du projet sous le nom :
+Certaines variables doivent être configurées sur Scalingo afin que l’application Symfony fonctionne correctement.
 
 
 
-Capture d'écran 2026-05-21 103806.png
+Les principales variables utilisées sont :
+
+
+
+\- `APP\_ENV=prod`
+
+\- `APP\_SECRET`
+
+
+
+Ces variables peuvent être ajoutées dans :
+
+
+
+`Environment > Variables`
+
+
+
+sur le tableau de bord Scalingo.
+
+
+
+`APP\_SECRET` permet notamment de sécuriser l’application Symfony.
 
